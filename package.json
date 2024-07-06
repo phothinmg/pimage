@@ -1,0 +1,29 @@
+{
+  "name": "pimage",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "./dist/index.d.ts",
+    "./dist/index.js",
+    "./dist/metafile-esm.json"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@imagemagick/magick-wasm": "^0.0.29",
+    "@types/node": "^20.14.10",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
+  }
+}
