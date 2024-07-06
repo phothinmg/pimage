@@ -12,14 +12,16 @@
   "files": [
     "./dist/index.d.ts",
     "./dist/index.js",
-    "./dist/metafile-esm.json"
+    "./dist/metafile-esm.json",
+    "./dist/magick.wasm",
+    "./dist/index.js.map"
   ],
   "scripts": {
     "build": "tsup"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pho Thin Maung",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@imagemagick/magick-wasm": "^0.0.29",
     "@types/node": "^20.14.10",
