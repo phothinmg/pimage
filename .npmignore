@@ -4,3 +4,4 @@ imgs
 tsup.config.ts
 pmpm-lock.yaml
 lib
+pimage
