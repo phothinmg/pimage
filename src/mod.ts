@@ -270,7 +270,10 @@ namespace Pimage {
    */
   async function icopack_gen(outputDir?: string): Promise<IconPackOutType> {
     const outDir = outputDir ?? (await mkdtemp("pimage-"));
-
+    
+    if (!existsSync(outDir)) {
+      mkdirSync(outDir);
+    }
     // Return an array of objects representing the different sizes and formats required for browser icons
     const icoArray: IconPackTypeArray = [
       // Favicon
