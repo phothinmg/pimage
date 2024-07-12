@@ -268,8 +268,8 @@ namespace Pimage {
    * Generates an array of objects representing the different sizes and formats required for browser icons.
    * @returns {Promise<IcoArrayType>} An array of objects representing the different sizes and formats required for browser icons.
    */
-  async function icopack_gen(): Promise<IconPackOutType> {
-    const outDir = await mkdtemp("pimage-");
+  async function icopack_gen(outputDir?: string): Promise<IconPackOutType> {
+    const outDir = outputDir ?? (await mkdtemp("pimage-"));
 
     // Return an array of objects representing the different sizes and formats required for browser icons
     const icoArray: IconPackTypeArray = [
@@ -401,7 +401,10 @@ namespace Pimage {
    * await icoPackGenerator("./path/to/image.png");
    * ```
    */
-  export async function icoPackGenerator(file: string | File): Promise<void> {
+  export async function icoPackGenerator(
+    file: string | File,
+    outputDir: string
+  ): Promise<void> {
     try {
       await initialize();
 
@@ -428,7 +431,7 @@ namespace Pimage {
       const fileData: Uint8Array = await loadImgData(file);
 
       // Generate browser-ico object
-      const fileArray: IconPackOutType = await icopack_gen();
+      const fileArray: IconPackOutType = await icopack_gen(outputDir);
       const outdir = fileArray.outDir;
       // Generate the ico files with different sizes
       const promises = fileArray.icoArray.map((file: IcoPackType) =>
