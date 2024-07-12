@@ -1,14 +1,14 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entryPoints: ["node_modules/express/index.js"],
-  outDir: "./pexpress",
-  // splitting: true,
+  entryPoints: ["src/index.ts"],
+  outDir: "./dist",
+  splitting: true,
   sourcemap: true,
   dts: true,
-  format: "cjs",
+  format: "esm",
   bundle: true,
-  // treeshake: true,
+  treeshake: true,
   clean: true,
   metafile: true,
 });
