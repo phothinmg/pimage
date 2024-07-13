@@ -1,3 +1,4 @@
-import Pimage from "./mod.ts";
-
-export default Pimage;
+export * from "./gen.ts";
+export * from "./helpers.ts";
+export * from "./imgtouri.ts";
+export * from "@imagemagick/magick-wasm";
