@@ -1,32 +1,32 @@
 import {
-  writeFile,
-  mkdirSync,
-  existsSync,
-  type NoParamCallback,
+	type NoParamCallback,
+	existsSync,
+	mkdirSync,
+	writeFile,
 } from "node:fs";
-import { extname, dirname } from "node:path";
+import { dirname, extname } from "node:path";
 
 export interface BaganWriteFileOptions {
-  filePath: string;
-  data: string | NodeJS.ArrayBufferView;
-  callback?: NoParamCallback;
+	filePath: string;
+	data: string | NodeJS.ArrayBufferView;
+	callback?: NoParamCallback;
 }
 const validExt: string[] = [
-  ".png",
-  ".ico",
-  ".jpg",
-  ".jpeg",
-  ".gif",
-  ".tiff",
-  ".tif",
-  ".webp",
-  ".bmp",
+	".png",
+	".ico",
+	".jpg",
+	".jpeg",
+	".gif",
+	".tiff",
+	".tif",
+	".webp",
+	".bmp",
 ];
 
 export function isValidExt(image: string | File): boolean {
-  const imageExt = getImageExt(image);
+	const imageExt = getImageExt(image);
 
-  return !!(imageExt !== "" && validExt.includes(imageExt));
+	return !!(imageExt !== "" && validExt.includes(imageExt));
 }
 
 /* 
@@ -34,15 +34,15 @@ export function isValidExt(image: string | File): boolean {
   next()=> if ext === "" throw error
   */
 function getImageExt(image: string | File): string {
-  return typeof image === "string"
-    ? extname(image)
-    : image instanceof File
-    ? extname(image.name)
-    : "";
+	return typeof image === "string"
+		? extname(image)
+		: image instanceof File
+			? extname(image.name)
+			: "";
 }
 
 export const getImgName = (imgPath: string) => {
-  return imgPath.split("/").slice(-1)[0].split(".")[0];
+	return imgPath.split("/").slice(-1)[0].split(".")[0];
 };
 
 /**
@@ -54,16 +54,16 @@ export const getImgName = (imgPath: string) => {
  * @param callback - An optional callback function to be executed after writing the file.
  */
 export function baganWriteFile({
-  filePath,
-  data,
-  callback,
+	filePath,
+	data,
+	callback,
 }: BaganWriteFileOptions): void {
-  const cb: NoParamCallback = callback ?? (() => true);
+	const cb: NoParamCallback = callback ?? (() => true);
 
-  const directoryPath = dirname(filePath);
-  if (!existsSync(directoryPath)) {
-    mkdirSync(directoryPath, { recursive: true });
-  }
+	const directoryPath = dirname(filePath);
+	if (!existsSync(directoryPath)) {
+		mkdirSync(directoryPath, { recursive: true });
+	}
 
-  writeFile(filePath, data, cb);
+	writeFile(filePath, data, cb);
 }
