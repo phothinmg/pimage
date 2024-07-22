@@ -4,7 +4,6 @@
     "sourceMap": true,
     "declarationMap": true,
     "declaration": true,
-    "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true,
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
