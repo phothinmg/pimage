@@ -1,46 +1,46 @@
 {
-  "name": "pimage",
-  "version": "0.0.9",
-  "description": "",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "files": [
-    "./dist/index.d.ts",
-    "./dist/index.js",
-    "./dist/metafile-esm.json",
-    "./dist/magick.wasm",
-    "./dist/index.js.map"
-  ],
-  "scripts": {
-    "build": "tsup"
-  },
-  "keywords": [],
-  "author": "Pho Thin Maung",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@babel/cli": "^7.24.8",
-    "@babel/core": "^7.24.9",
-    "@babel/plugin-transform-typescript": "^7.24.8",
-    "@babel/preset-env": "^7.24.8",
-    "@babel/preset-typescript": "^7.24.7",
-    "@biomejs/biome": "^1.8.3",
-    "@imagemagick/magick-wasm": "^0.0.29",
-    "@types/node": "^20.14.10",
-    "dax-sh": "^0.41.0",
-    "esbuild-plugin-babel": "^0.2.3",
-    "tsup": "^8.1.0",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.3"
-  },
-  "pnpm": {
-    "allowedDeprecatedVersions": {
-      "glob": "7.2.3",
-      "inflight": "1.0.6"
-    }
-  }
+	"name": "pimage",
+	"version": "0.0.9",
+	"description": "",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"./dist/index.d.ts",
+		"./dist/index.js",
+		"./dist/metafile-esm.json",
+		"./dist/magick.wasm",
+		"./dist/index.js.map"
+	],
+	"scripts": {
+		"build": "tsup"
+	},
+	"keywords": [],
+	"author": "Pho Thin Maung",
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"@babel/cli": "^7.24.8",
+		"@babel/core": "^7.24.9",
+		"@babel/plugin-transform-typescript": "^7.24.8",
+		"@babel/preset-env": "^7.24.8",
+		"@babel/preset-typescript": "^7.24.7",
+		"@biomejs/biome": "^1.8.3",
+		"@imagemagick/magick-wasm": "^0.0.29",
+		"@types/node": "^20.14.10",
+		"dax-sh": "^0.41.0",
+		"esbuild-plugin-babel": "^0.2.3",
+		"tsup": "^8.1.0",
+		"tsx": "^4.16.2",
+		"typescript": "^5.5.3"
+	},
+	"pnpm": {
+		"allowedDeprecatedVersions": {
+			"glob": "7.2.3",
+			"inflight": "1.0.6"
+		}
+	}
 }

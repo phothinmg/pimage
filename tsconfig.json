@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "sourceMap": true,
-    "declarationMap": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "./dist"
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules/*", "note/*"]
+	"compilerOptions": {
+		"allowJs": true,
+		"sourceMap": true,
+		"declarationMap": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"moduleResolution": "NodeNext",
+		"module": "NodeNext",
+		"outDir": "./dist"
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules/*", "note/*"]
 }

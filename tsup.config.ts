@@ -1,6 +1,6 @@
-import { defineConfig } from "tsup";
 // @ts-ignore
-import babel from 'esbuild-plugin-babel';
+import babel from "esbuild-plugin-babel";
+import { defineConfig } from "tsup";
 export default defineConfig({
   entryPoints: ["src/index.ts"],
   outDir: "./dist",
